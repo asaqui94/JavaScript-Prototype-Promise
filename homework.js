@@ -26,17 +26,15 @@ function People(name, age){
     this.printInfo = (nationality) => {
         return `${name} is ${nationality} and is ${age} years old.`
     }
+    this.addAge = (number) => {
+        return `Arpi will be ${arpi.age + number} in ${number} years`
 }
 
 let arpi = new People('Arpi', 26)
 console.log(arpi.printInfo('American'))
 let isra = new People('Isra', 29)
 console.log(isra.printInfo('Spanish'))
-
-People.prototype.age = (number) => {
-    return `Arpi will be ${arpi.age + number} in ${number} years`
-}
-console.log(People.prototype.age(3))
+console.log(arpi.addAge(3))
 
 // Question 3
 // const checkLength = (string) => {
